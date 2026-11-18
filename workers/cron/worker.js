@@ -82,7 +82,7 @@
 // double post is unrecoverable while a missed post is merely a missed post).
 //
 // Secrets required (wrangler secret put ...):
-//   GH_TOKEN  — fine-grained PAT for moscowjh/wnba-stats, Actions read/write
+//   GH_TOKEN  — fine-grained PAT for moscowjh/statsataglance (formerly wnba-stats), Actions read/write
 //   CRON_KEY  — shared key for manual test runs via the Worker URL
 //
 // Email requires Email Routing enabled on statsataglance.com with
@@ -91,7 +91,7 @@
 
 import { EmailMessage } from "cloudflare:email";
 
-const REPO = "moscowjh/wnba-stats";
+const REPO = "moscowjh/statsataglance";
 const WORKFLOW = "build.yml";
 const SITE_URL = "https://wnba.statsataglance.com";
 const DISPATCH_CRON = "17 11 * * *";

@@ -63,7 +63,7 @@ git init
 git add core/ sites/wnba/ .gitignore .github/workflows/build.yml DEPLOY.md
 git commit -m "WNBA stats site: automated daily build"
 # create an empty public repo on github.com first, then:
-git remote add origin https://github.com/moscowjh/wnba-stats.git
+git remote add origin https://github.com/moscowjh/statsataglance.git
 git branch -M main
 git push -u origin main
 ```
@@ -485,7 +485,7 @@ missed WNBA build; the 11:17 catch-up covers a missed WWC one.
 **Resolution:** GitHub's native `schedule` missed three mornings straight (June 7,
 8, 9). Replaced it with a **Cloudflare Cron Trigger** Worker (`workers/cron/`) that
 calls GitHub's `workflow_dispatch` API at 11:17 UTC daily. Setup: create a
-fine-grained GitHub PAT (repo `wnba-stats`, Actions: Read and write), then
+fine-grained GitHub PAT (repo `statsataglance`, formerly `wnba-stats`; Actions: Read and write), then
 `cd workers/cron && npx wrangler login && npx wrangler deploy && npx wrangler secret
 put GH_TOKEN`. The Worker's `?key=` route (CRON_KEY secret) fires a manual test.
 Keep `workflow_dispatch` in daily.yml — the Worker depends on it; the old
