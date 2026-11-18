@@ -1,7 +1,7 @@
 # statsataglance — production repo notes
 
 This is the live, deployed WNBA stats site (`wnba.statsataglance.com`) and its own
-git repo (`moscowjh/wnba-stats`, **public**). Mobile-first, plaintextsports
+git repo (`moscowjh/statsataglance`, **public**; renamed from `wnba-stats` 2026-11-17). Mobile-first, plaintextsports
 aesthetic, **single-file / zero-dependency** — performance is the brand, so weigh
 every change against it.
 
